@@ -17,6 +17,7 @@ export const useGetBooks: UseGetBooksType = () => {
   const getBooks = async () => {
     try {
       setLoading(true);
+      setBooks([]);
       const response = await fetchBooks();
       setBooks(response);
     } catch (err) {

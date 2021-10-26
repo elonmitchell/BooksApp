@@ -7,7 +7,7 @@ export const fontSize = {
 };
 
 export const color = {
-  primary: '#2E3238',
+  primary: '#3F51B5',
   error: '#B00020',
   background: {
     lightGray: '#f8f9fa',

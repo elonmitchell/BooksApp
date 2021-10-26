@@ -8,13 +8,13 @@ import BookListItem from './BookListItem';
 import Separator from './Separator';
 
 const BookList = () => {
-  const { books, error, loading } = useGetBooks();
+  const { books, error, loading, refetch } = useGetBooks();
   return (
     <FlatList
       data={books}
       renderItem={renderItem}
       ListHeaderComponent={() => (
-        <BookListHeader title="E'lon Mitchell's books" />
+        <BookListHeader title="E'lon Mitchell's books" onReload={refetch} />
       )}
       ListEmptyComponent={() => (
         <BookListEmpty error={error} loading={loading} />
